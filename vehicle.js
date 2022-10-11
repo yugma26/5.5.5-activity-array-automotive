@@ -1,5 +1,5 @@
 class Vehicle {
-    constructor(make, model, year, color, mileage) {
+    constructor(make, model, year, color, mileage, passenger, fuel) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -8,18 +8,15 @@ class Vehicle {
         this.speed = 0;
         this.mileage = mileage;
         this.started = false;
-        this.numberOfWheels = 0;
+        this.numberOfWheels = 0
+        this.fuel=10;
+        this.maxPassengers=5;
+
+        
+        
     }
 
-    start() {
-        if (this.fuel > 0) {
-            return this.started = true;
-            console.log("engine started...!!!");
-        } else {
-            return this.started = false;
-            console.log("engine cannot start...");
-        }
-    }
+    
     accelerate() {
         if (this.started) {
             if (this.fuel > 0) {
@@ -85,7 +82,14 @@ class Vehicle {
     }
 }
 
+
+
+//
 //This exports things you want to use from this "module", more info in readme
+
 module.exports = {
-    Vehicle
-}
+    Vehicle }
+
+// export default {
+//     Vehicle
+// }
